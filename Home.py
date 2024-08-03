@@ -4,7 +4,7 @@ st.set_page_config(page_title='Attendance System',layout='wide')
 
 
 
-with st.spinner("Welcome to Face Attendance System"):
+with st.spinner("Welcome to Face Attendance System GSFCU"):
     import face_rec
 
 
