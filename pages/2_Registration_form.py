@@ -31,7 +31,7 @@ with st.container():
     role = st.selectbox(label='Role', options=(
         'Student', 'Teacher', 'Non Teaching Faculty', 'Higher Authorities'))  # Removed placeholder
     course = st.selectbox(label='Select Course', options=(
-        'Computer Science', 'Electrical', 'Electronics', 'Others'))
+        'Computer Science', 'Chemical', 'FEHS', 'Faculty'))
     year_level = st.selectbox(label='Year Level', options=(
         'I - First Year', 'II - Second Year', 'III - Third Year', 'IV - Fourth Year', 'v - Others'))
     address = st.text_area(label='Address', placeholder='Enter your address')
