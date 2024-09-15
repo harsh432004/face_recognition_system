@@ -29,6 +29,11 @@ st.markdown("""
         font-size: 18px;
         color: green;
     }
+    .center-image {
+        display: flex;
+        justify-content: center;
+        align-items: right;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -39,8 +44,10 @@ with st.spinner("Loading HakersxCoders Face Attendance System..."):
 
 # Add logo or image for a more polished look
 # Replace 'logo.png' with the path to your logo/image
-image = Image.open('logo.jpeg')
+image = Image.open('logo.jpg')
+st.markdown('<div class="center-image">', unsafe_allow_html=True)
 st.image(image, width=400)
+st.markdown('</div>', unsafe_allow_html=True)
 
 # Create an interactive header section
 st.markdown('<div class="header-section">Attendance System using Face Recognition</div>',
@@ -49,25 +56,11 @@ st.markdown('<div class="sub-header">Powered by HakersxCoders | Efficient | Secu
             unsafe_allow_html=True)
 
 # Success messages for user guidance
-# st.markdown('<div class="success-message">Please register your face from the registration form if you are new.</div>', unsafe_allow_html=True)
 st.markdown('<div class="success-message">Redis database successfully connected!</div>',
             unsafe_allow_html=True)
 
 # Add interactive buttons and columns for better layout
 st.write('---')  # Separator for visual clarity
-
-# Create two columns for better UX layout
-col1, col2 = st.columns([1, 1])
-
-# with col1:
-#     if st.button('Register New Student'):
-#         st.write('🔄 Redirecting to registration page...')
-#         # Add your registration logic here
-
-# with col2:
-#     if st.button('Start Attendance Recognition'):
-#         st.write('🟢 Initializing face recognition...')
-        # Add your attendance recognition logic here
 
 # Footer section with links or additional info
 st.write('---')
