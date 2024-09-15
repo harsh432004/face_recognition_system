@@ -13,13 +13,12 @@ from datetime import datetime
 
 import os
 
-r = redis.StrictRedis(
-    host='redis-13028.c93.us-east-1-3.ec2.redns.redis-cloud.com',
-    port=13028,
-    password='u1M738HF2YCWPYDMVEtxdqmDAP2T0pkA'
-)
+r = redis.StrictRedis(host='redis-13028.c93.us-east-1-3.ec2.redns.redis-cloud.com',
+                    port=13028,
+                    password='u1M738HF2YCWPYDMVEtxdqmDAP2T0pkA')
 
 # Retrieve Data from database
+
 
 
 def retrive_data(name):
@@ -39,7 +38,7 @@ def retrive_data(name):
 
 # Configure face analysis
 faceapp = FaceAnalysis(name='buffalo_sc', root='insightface_model', providers=[
-                       'CPUExecutionProvider'])
+                    'CPUExecutionProvider'])
 faceapp.prepare(ctx_id=0, det_size=(640, 640), det_thresh=0.5)
 
 # ML Search Algorithm
