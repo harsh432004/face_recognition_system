@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image
+from PIL import Image  # Correct import statement
 import time
 
 # Set page configuration with a customized title and layout
@@ -34,6 +34,20 @@ st.markdown("""
         justify-content: center;
         align-items: right;
     }
+    .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #555;
+    }
+    .footer a {
+        color: #1F618D;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -52,7 +66,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 # Create an interactive header section
 st.markdown('<div class="header-section">Attendance System using Face Recognition</div>',
             unsafe_allow_html=True)
-st.markdown('<div class="sub-header">Powered by HakersxCoders | Efficient | Secure | Reliable</div>',
+st.markdown('<div class="success-message">Powered by HakersxCoders | Efficient | Secure | Reliable</div>',
             unsafe_allow_html=True)
 
 # Success messages for user guidance
@@ -65,8 +79,8 @@ st.write('---')  # Separator for visual clarity
 # Footer section with links or additional info
 st.write('---')
 st.markdown("""
-    <div style='text-align: center;'>
+    <div class='footer'>
         <p>Hack the Mountains 5.0 | Developed by HakersxCoders</p>
-        <p><a href="https://hackthemountains.tech" target="_blank">Visit Hackathon Website</a></p>
+        <p><a href="https://hackthemountain.tech/" target="_blank">Visit Hackathon Website</a></p>
     </div>
 """, unsafe_allow_html=True)
